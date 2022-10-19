@@ -1,5 +1,5 @@
 # hello-soroban
-First steps:
+Capturing the first steps for posterity. The first steps:
 
 - use [rust.vim plugin](https://github.com/rust-lang/rust.vim)
 
