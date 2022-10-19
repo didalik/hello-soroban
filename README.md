@@ -1,5 +1,7 @@
 # hello-soroban
-First steps
+First steps:
+
+- use [rust.vim plugin](https://github.com/rust-lang/rust.vim)
 
 ## Misc
 
