@@ -7,5 +7,4 @@ First steps:
 - Run:
 ```
 rustup component add rust-src --toolchain nightly-aarch64-apple-darwin
-npm install --legacy-peer-deps
 ```

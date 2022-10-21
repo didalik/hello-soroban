@@ -68,11 +68,11 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 32 + 23) / 47)
-exe 'vert 1resize ' . ((&columns * 53 + 53) / 107)
-exe '2resize ' . ((&lines * 32 + 23) / 47)
-exe 'vert 2resize ' . ((&columns * 53 + 53) / 107)
-exe '3resize ' . ((&lines * 11 + 23) / 47)
+exe '1resize ' . ((&lines * 34 + 24) / 49)
+exe 'vert 1resize ' . ((&columns * 89 + 89) / 179)
+exe '2resize ' . ((&lines * 34 + 24) / 49)
+exe 'vert 2resize ' . ((&columns * 89 + 89) / 179)
+exe '3resize ' . ((&lines * 11 + 24) / 49)
 argglobal
 balt package.json
 setlocal noautoindent
@@ -190,7 +190,7 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 22 - ((13 * winheight(0) + 16) / 32)
+let s:l = 22 - ((14 * winheight(0) + 17) / 34)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -315,7 +315,7 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 1 - ((0 * winheight(0) + 16) / 32)
+let s:l = 1 - ((0 * winheight(0) + 17) / 34)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -440,18 +440,19 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 10 - ((8 * winheight(0) + 5) / 11)
+let s:l = 1 - ((0 * winheight(0) + 5) / 11)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-10
-normal! 030|
+1
+normal! 0
 wincmd w
-exe '1resize ' . ((&lines * 32 + 23) / 47)
-exe 'vert 1resize ' . ((&columns * 53 + 53) / 107)
-exe '2resize ' . ((&lines * 32 + 23) / 47)
-exe 'vert 2resize ' . ((&columns * 53 + 53) / 107)
-exe '3resize ' . ((&lines * 11 + 23) / 47)
+3wincmd w
+exe '1resize ' . ((&lines * 34 + 24) / 49)
+exe 'vert 1resize ' . ((&columns * 89 + 89) / 179)
+exe '2resize ' . ((&lines * 34 + 24) / 49)
+exe 'vert 2resize ' . ((&columns * 89 + 89) / 179)
+exe '3resize ' . ((&lines * 11 + 24) / 49)
 tabnext
 edit initialize.sh
 set splitbelow splitright
@@ -579,12 +580,12 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 71 - ((44 * winheight(0) + 22) / 45)
+let s:l = 8 - ((0 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-71
-normal! 03|
+8
+normal! 0
 tabnext
 edit Makefile
 set splitbelow splitright
@@ -712,7 +713,7 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 1 - ((0 * winheight(0) + 22) / 45)
+let s:l = 1 - ((0 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -720,11 +721,11 @@ normal! zt
 normal! 0
 tabnext 1
 set stal=1
-badd +1 package.json
+badd +1 .gitignore
 badd +1 ../wrap/soroban-example-dapp/README.md
-badd +1 initialize.sh
+badd +0 initialize.sh
 badd +1 Makefile
-badd +0 .gitignore
+badd +1 package.json
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
