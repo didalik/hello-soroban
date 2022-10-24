@@ -31,6 +31,7 @@ set expandtab
 set fileencodings=ucs-bom,utf-8,default,latin1
 set helplang=en
 set modelines=0
+set regexpengine=0
 set runtimepath=~/.vim,~/.vim/pack/plugins/start/vim-go,~/.vim/pack/plugins/start/typecorr,~/.vim/pack/plugins/start/rust.vim,/usr/share/vim/vimfiles,/usr/share/vim/vim82,~/.vim/pack/plugins/start/rust.vim/after,/usr/share/vim/vimfiles/after,~/.vim/after
 set shiftwidth=2
 set tabstop=2
@@ -176,7 +177,7 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 1 - ((0 * winheight(0) + 22) / 45)
+let s:l = 1 - ((0 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -309,17 +310,17 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 9 - ((8 * winheight(0) + 22) / 45)
+let s:l = 5 - ((4 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-9
-normal! 023|
-tabnext 1
+5
+normal! 021|
+tabnext 2
 set stal=1
-badd +0 .gitmodules
-badd +0 README.md
-badd +1 .gitignore
+badd +0 .gitignore
+badd +1 .gitmodules
+badd +1 README.md
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
