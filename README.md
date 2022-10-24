@@ -3,6 +3,10 @@ Capturing the first steps for posterity. The first steps:
 
 - use [rust.vim plugin](https://github.com/rust-lang/rust.vim)
 - use [vim-javascript plugin](https://github.com/pangloss/vim-javascript)
+- create starter:
+``` bash
+npx create-next-app nextjs-blog --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"
+```
 
 ## Links
 
