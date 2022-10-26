@@ -175,12 +175,12 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 1 - ((0 * winheight(0) + 11) / 22)
+let s:l = 14 - ((13 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+14
+normal! 054|
 tabnext
 edit pages/sandbox/hooks.js
 set splitbelow splitright
@@ -308,26 +308,14 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-1
-normal! zo
-5
-normal! zo
-1
-normal! zc
-4
-normal! zo
-18
-normal! zo
 17
 normal! zo
-25
-normal! zo
-let s:l = 20 - ((6 * winheight(0) + 11) / 22)
+let s:l = 72 - ((71 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-20
-normal! 030|
+72
+normal! 0
 tabnext
 edit ../soroban-example-dapp/pages/index.tsx
 set splitbelow splitright
@@ -455,7 +443,7 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 1 - ((0 * winheight(0) + 15) / 30)
+let s:l = 1 - ((0 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -592,7 +580,7 @@ setlocal wrapmargin=0
 normal! zo
 12
 normal! zo
-let s:l = 1 - ((0 * winheight(0) + 15) / 30)
+let s:l = 1 - ((0 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -725,19 +713,19 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 1 - ((0 * winheight(0) + 11) / 22)
+let s:l = 1 - ((0 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 0
-tabnext 4
+tabnext 2
 set stal=1
-badd +1 pages/index.js
-badd +0 pages/sandbox/hooks.js
-badd +0 ../soroban-example-dapp/wallet/hooks/useIsMounted.tsx
-badd +0 ../soroban-example-dapp/pages/index.tsx
-badd +0 ../soroban-example-dapp/components/molecules/wallet-data/index.tsx
+badd +0 pages/index.js
+badd +1 pages/sandbox/hooks.js
+badd +1 ../soroban-example-dapp/pages/index.tsx
+badd +1 ../soroban-example-dapp/components/molecules/wallet-data/index.tsx
+badd +1 ../soroban-example-dapp/wallet/hooks/useIsMounted.tsx
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
