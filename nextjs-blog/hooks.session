@@ -586,12 +586,12 @@ setlocal wrapmargin=0
 normal! zo
 6
 normal! zo
-let s:l = 22 - ((21 * winheight(0) + 23) / 46)
+let s:l = 1 - ((0 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-22
-normal! 07|
+1
+normal! 0
 wincmd w
 argglobal
 if bufexists("pages/sandbox/hooks.js") | buffer pages/sandbox/hooks.js | else | edit pages/sandbox/hooks.js | endif
@@ -711,22 +711,36 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-4
-normal! zo
-4
-normal! zc
 17
 normal! zo
 30
 normal! zo
-78
+40
 normal! zo
-let s:l = 34 - ((3 * winheight(0) + 23) / 46)
+52
+normal! zo
+40
+normal! zc
+51
+normal! zo
+57
+normal! zo
+70
+normal! zo
+51
+normal! zc
+56
+normal! zo
+70
+normal! zo
+83
+normal! zo
+let s:l = 78 - ((45 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-34
-normal! 06|
+78
+normal! 07|
 wincmd w
 2wincmd w
 exe 'vert 1resize ' . ((&columns * 89 + 89) / 178)
@@ -1133,7 +1147,7 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 26 - ((14 * winheight(0) + 7) / 15)
+let s:l = 26 - ((0 * winheight(0) + 7) / 15)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1387,12 +1401,12 @@ setlocal wrapmargin=0
 normal! zo
 12
 normal! zo
-let s:l = 19 - ((7 * winheight(0) + 7) / 14)
+let s:l = 30 - ((13 * winheight(0) + 7) / 14)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-19
-normal! 04|
+30
+normal! 0
 wincmd w
 exe '1resize ' . ((&lines * 15 + 24) / 49)
 exe 'vert 1resize ' . ((&columns * 89 + 89) / 178)
@@ -1405,19 +1419,19 @@ exe 'vert 4resize ' . ((&columns * 88 + 89) / 178)
 exe '5resize ' . ((&lines * 14 + 24) / 49)
 tabnext 2
 set stal=1
+badd +1 ../soroban-example-dapp/package.json
 badd +1 pages/index.js
-badd +0 pages/sandbox/hooks.js
+badd +4 pages/sandbox/wallet.js
+badd +1 wallet/hooks/useAccount.tsx
+badd +1 package.json
+badd +1 pages/sandbox/hooks.js
+badd +1 wallet/hooks/useIsMounted.tsx
+badd +1 wallet/AppContext.tsx
+badd +1 wallet/index.tsx
+badd +1 components/molecules/wallet-data/index.js
 badd +6 ../soroban-example-dapp/pages/index.tsx
 badd +21 ../soroban-example-dapp/components/molecules/wallet-data/index.tsx
-badd +0 ../soroban-example-dapp/wallet/hooks/useIsMounted.tsx
-badd +4 pages/sandbox/wallet.js
-badd +0 package.json
-badd +0 ../soroban-example-dapp/package.json
-badd +0 components/molecules/wallet-data/index.js
-badd +0 wallet/index.tsx
-badd +0 wallet/hooks/useIsMounted.tsx
-badd +0 wallet/hooks/useAccount.tsx
-badd +0 wallet/AppContext.tsx
+badd +1 ../soroban-example-dapp/wallet/hooks/useIsMounted.tsx
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif

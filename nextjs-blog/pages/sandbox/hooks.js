@@ -37,7 +37,7 @@ export default function Hooks () {
   );
 }
 
-const themes = {
+const themes = { // {{{2
   light: {
     foreground: "#000000",
     background: "#eeeeee"
@@ -48,17 +48,47 @@ const themes = {
   }
 };
 
-const ThemeContext = React.createContext(themes.light);
+const ThemeContext = React.createContext({ // {{{2
+  theme: themes.light,
+  toggleTheme: _ => {},
+})
 
-function App() {
+function ThemeTogglerButton() { // {{{2
   return (
-    <ThemeContext.Provider value={themes.dark}>
+    <ThemeContext.Consumer>
+      {({theme, toggleTheme}) => (        
+        <button
+          onClick={toggleTheme}
+          style={{ background: theme.background, color: theme.foreground }}>
+          Toggle Theme
+        </button>
+      )}
+    </ThemeContext.Consumer>
+  );
+}
+
+function App() { // {{{2
+  let [theme, setTheme] = React.useState(themes.dark)
+  let toggleTheme =  _ => setTheme(
+    theme === themes.dark ? themes.light : themes.dark
+  )
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme, }}>
       <Toolbar />
+      <Content/>
     </ThemeContext.Provider>
   );
 }
 
-function Toolbar(props) {
+function Content() { // {{{2
+  return (
+    <div>
+      <ThemeTogglerButton />
+    </div>
+  );
+}
+
+function Toolbar(props) { // {{{2
   return (
     <div>
       <ThemedButton />
@@ -66,10 +96,11 @@ function Toolbar(props) {
   );
 }
 
-function ThemedButton() {
-  const theme = React.useContext(ThemeContext);  
+function ThemedButton() { // {{{2
+  const s = React.useContext(ThemeContext)
+  React.useEffect(_ => console.log(s))
   return (    
-    <button style={{ background: theme.background, color: theme.foreground }}>
+    <button style={{ background: s.theme.background, color: s.theme.foreground }}>
       I am styled by theme context!    
     </button>  
   );
