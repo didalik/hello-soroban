@@ -11,8 +11,9 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Play with <Link href="/sandbox/hooks">hooks!</Link><br/>
-          Read <Link href="/posts/first-post">this page!</Link>
+          Read <Link href="/posts/first-post">this page!</Link><br/>
+          Play with <Link href="/sandbox/hooks">hooks</Link>; or<br/>
+          go to the <Link href="/sandbox/wallet">wallet!</Link><br/>
         </h1>
 
         <p className="description">

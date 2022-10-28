@@ -1,7 +1,7 @@
 import Link from 'next/link'; // {{{1
 import React from 'react'
 
-/* {{{1
+/* FirstPost {{{1
 export default function FirstPost() {
   return (
     <>
@@ -14,25 +14,64 @@ export default function FirstPost() {
 }
 */
 
-export default function Hooks () { // {{{1
+/* Hooks () // {{{1
+*/
+export default function Hooks () {
   return (
     // https://reactjs.org/docs/hooks-reference.html#usereducer
-    /* Counter with React.useState(initialCount) {{{2
-    <>
-      <Counter initialCount={1}/>
-    </>
-    */
-    /* Counter with React.useReducer(reducer, initialState) {{{2
-    <>
-      <Counter/>
-    </>
-    */
-    /* Counter with React.useReducer(reducer, initialCount, init) {{{2
-    */
+    // Counter with React.useState(initialCount) {{{2
+    //<>
+      //<Counter initialCount={1}/>
+    //</>
+    // Counter with React.useReducer(reducer, initialState) {{{2
+    //<>
+      //<Counter/>
+    //</>
+    // Counter with React.useReducer(reducer, initialCount, init) {{{2
     <>
       <Counter initialCount={0}/>
+      <App/>
+      <Toolbar />
     </>
     // }}}2
+  );
+}
+
+const themes = {
+  light: {
+    foreground: "#000000",
+    background: "#eeeeee"
+  },
+  dark: {
+    foreground: "#ffffff",
+    background: "#222222"
+  }
+};
+
+const ThemeContext = React.createContext(themes.light);
+
+function App() {
+  return (
+    <ThemeContext.Provider value={themes.dark}>
+      <Toolbar />
+    </ThemeContext.Provider>
+  );
+}
+
+function Toolbar(props) {
+  return (
+    <div>
+      <ThemedButton />
+    </div>
+  );
+}
+
+function ThemedButton() {
+  const theme = React.useContext(ThemeContext);  
+  return (    
+    <button style={{ background: theme.background, color: theme.foreground }}>
+      I am styled by theme context!    
+    </button>  
   );
 }
 
