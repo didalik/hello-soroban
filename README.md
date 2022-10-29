@@ -22,3 +22,14 @@ git clone git@github.com:didalik/hello-soroban.git
 cd hello-soroban
 git submodule update --init --recursive
 ```
+
+## Join Futurenet
+```bash
+      docker run --rm -it \
+      --name stellar \
+      -p 8000:8000 \
+      stellar/quickstart:soroban-dev \
+      --futurenet \
+      --enable-soroban-rpc
+```
+Source: https://github.com/tyvdh/soroban-pioneer-quest/blob/main/.gitpod.yml#L9-L14 - many thanks, Tyler! :)
