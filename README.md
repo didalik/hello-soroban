@@ -15,3 +15,10 @@ npx create-next-app nextjs-blog --use-npm --example "https://github.com/vercel/n
 - [Learning Rust](https://doc.rust-lang.org/book/ch01-03-hello-cargo.html)
 - [Learning React](https://reactjs.org/tutorial/tutorial.html)
 - [Learning Next.js](https://nextjs.org/learn/basics/create-nextjs-app)
+
+## Install
+```bash
+git clone git@github.com:didalik/hello-soroban.git
+cd hello-soroban
+git submodule update --init --recursive
+```
