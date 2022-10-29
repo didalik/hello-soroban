@@ -2,7 +2,10 @@ import React from 'react';
 import { AppContext } from "../AppContext";
 
 export function useAccount() {
-  const {address} = React.useContext(AppContext);
+  const ctx = React.useContext(AppContext);
+  React.useEffect(_ => console.log(ctx))
+
+  const {address} = ctx
 
   if (!address) {
     return {};
