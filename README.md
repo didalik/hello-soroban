@@ -33,3 +33,10 @@ git submodule update --init --recursive
       --enable-soroban-rpc
 ```
 Source: https://github.com/tyvdh/soroban-pioneer-quest/blob/main/.gitpod.yml#L9-L14 - many thanks, Tyler! :)
+
+## Use Freighter, fund your new account
+[Freighter Docs](https://docs.freighter.app/docs/guide/introduction)
+```bash
+curl --location --request GET 'https://friendbot-futurenet.stellar.org?addr=GCFJ5IGBT66OBII3WKAZAZHULKRUWRYBQNMGDXJ3LCPI7XGDXWE2HZPP'
+```
+Special thanks to: https://pullanswer.com/questions/use-the-cli-to-deploy-contract-against-futurenet
