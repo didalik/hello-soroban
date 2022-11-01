@@ -6,9 +6,9 @@ set -e
 echo "=== START $0 on $(date) ===" # {{{1
 
 npx ttab -t 'next dev' -w "npx next dev"
-npx ttab -t 'port 3000' -w "/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome 'http://localhost:3000'"
-cd ../soroban-example-dapp
-npx ttab -t 'soroban' -w "soroban serve"
+#npx ttab -t 'port 3000' -w "/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome 'http://localhost:3000'"
+#cd ../soroban-example-dapp
+#npx ttab -t 'soroban' -w "soroban serve"
 echo $@
 
 echo "===  STOP $0 on $(date) ===" # }}}1

@@ -440,7 +440,7 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 16 - ((15 * winheight(0) + 23) / 46)
+let s:l = 16 - ((0 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -587,14 +587,14 @@ setlocal wrap
 setlocal wrapmargin=0
 1
 normal! zo
-6
+7
 normal! zo
-let s:l = 1 - ((0 * winheight(0) + 23) / 46)
+let s:l = 22 - ((21 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+22
+normal! 07|
 wincmd w
 argglobal
 if bufexists("pages/sandbox/hooks.js") | buffer pages/sandbox/hooks.js | else | edit pages/sandbox/hooks.js | endif
@@ -885,12 +885,12 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 7 - ((6 * winheight(0) + 11) / 22)
+let s:l = 6 - ((5 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-7
-normal! 0
+6
+normal! 04|
 wincmd w
 argglobal
 if bufexists("wallet/hooks/useIsMounted.tsx") | buffer wallet/hooks/useIsMounted.tsx | else | edit wallet/hooks/useIsMounted.tsx | endif
@@ -1010,7 +1010,7 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 4 - ((3 * winheight(0) + 4) / 8)
+let s:l = 4 - ((0 * winheight(0) + 4) / 8)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1135,7 +1135,7 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 26 - ((21 * winheight(0) + 11) / 22)
+let s:l = 26 - ((0 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1387,13 +1387,14 @@ setlocal wrap
 setlocal wrapmargin=0
 12
 normal! zo
-let s:l = 20 - ((19 * winheight(0) + 7) / 14)
+let s:l = 17 - ((16 * winheight(0) + 7) / 14)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-20
-normal! 019|
+17
+normal! 03|
 wincmd w
+5wincmd w
 exe '1resize ' . ((&lines * 22 + 24) / 49)
 exe 'vert 1resize ' . ((&columns * 89 + 89) / 178)
 exe '2resize ' . ((&lines * 8 + 24) / 49)
@@ -1936,24 +1937,24 @@ normal! 0
 wincmd w
 exe 'vert 1resize ' . ((&columns * 89 + 89) / 178)
 exe 'vert 2resize ' . ((&columns * 88 + 89) / 178)
-tabnext 5
+tabnext 3
 set stal=1
 badd +1 ../soroban-example-dapp/package.json
 badd +1 pages/index.js
 badd +4 pages/sandbox/wallet.js
 badd +1 wallet/hooks/useAccount.tsx
+badd +1 wallet/components/WalletProvider.tsx
+badd +1 wallet/connectors/freighter/index.tsx
+badd +6 ../soroban-example-dapp/pages/index.tsx
 badd +1 package.json
 badd +1 pages/sandbox/hooks.js
 badd +1 wallet/hooks/useIsMounted.tsx
 badd +1 wallet/AppContext.tsx
 badd +1 wallet/index.tsx
 badd +1 components/molecules/wallet-data/index.js
-badd +6 ../soroban-example-dapp/pages/index.tsx
+badd +1 ../soroban-example-dapp/pages/_app.tsx
 badd +21 ../soroban-example-dapp/components/molecules/wallet-data/index.tsx
 badd +1 ../soroban-example-dapp/wallet/hooks/useIsMounted.tsx
-badd +0 wallet/components/WalletProvider.tsx
-badd +0 ../soroban-example-dapp/pages/_app.tsx
-badd +0 wallet/connectors/freighter/index.tsx
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif

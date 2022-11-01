@@ -10,6 +10,11 @@ import { useAccount, useIsMounted, useNetwork } from '../../../wallet'
 // https://jameschambers.co.uk/vim-typescript-slow
 
 export function WalletData() { // {{{1
+  React.useEffect(_ => console.log(window))
+/*
+ * Wallet Connect Project: SHED
+ * Wallet Connect Project ID: a0f9ac3acb29cb772c82aa14127c18aa
+ */
 // TODO: Eliminate flash of unconnected content on loading
   const mounted = useIsMounted()
   const { data: account } = useAccount()
