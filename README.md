@@ -51,3 +51,22 @@ Fund
 ```
 curl --location --request GET 'https://friendbot-futurenet.stellar.org?addr=GD7BCUTI6YPVGYM7TKCMS4TYPGPWXLJ2QZ6AALXXJL6SPID7UQXIRKM3'
 ```
+
+My desktop `miasrv` is amd64, has the latest `rustup` and `rustc`:
+```
+alec@miasrv ~ $ uname -a
+Linux miasrv 5.4.0-131-generic #147-Ubuntu SMP Fri Oct 14 17:07:22 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+alec@miasrv ~ $ rustup -V
+rustup 1.25.1 (bb60b1e89 2022-07-12)
+info: This is the version for the rustup toolchain manager, not the rustc compiler.
+info: The currently active `rustc` version is `rustc 1.64.0 (a55dd71d5 2022-09-19)`
+```
+
+Build latest CLI v0.1.2 (takes some time):
+```
+alec@miasrv ~/process/stellar/hello-soroban (main) $ $(git clone https://github.com/stellar/soroban-cli.git; cd ./soroban-cli; git checkout v0.1.2; cargo install --path .)
+...
+    Finished release [optimized] target(s) in 6m 37s
+   Replacing /home/alec/.cargo/bin/soroban
+    Replaced package `soroban-cli v0.1.0 (/home/alec/process/stellar/hello-soroban/soroban-cli)` with `soroban-cli v0.1.2 (/home/alec/process/stellar/hello-soroban/soroban-cli)` (executable `soroban`)
+```
