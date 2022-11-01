@@ -77,3 +77,15 @@ alec@miasrv ~/process/stellar/hello-soroban (main) $ $(git clone https://github.
 ...
     Finished release [optimized] target(s) in 1m 50s
 ```
+
+Deploy the wasm contract to futurenet:
+```
+alec@miasrv ~/process/stellar/hello-soroban (main) $ soroban deploy \
+>   --wasm soroban-examples/target/wasm32-unknown-unknown/release/soroban_hello_world_contract.wasm \
+>   --rpc-url http://localhost:8000/soroban/rpc \
+>   --secret-key SATSTNUESANXDTF3XGCGMCA3VTCSLTAP35S4MNFSVTID7CRFXLNTT7LK \
+>   --network-passphrase "Test SDF Future Network ; October 2022" \
+>   --salt 0
+success
+6c0bfad9a0ba7ce51b9e540726bd036107ed624f06f2c9192b2613f0c4f7d7d8
+```
