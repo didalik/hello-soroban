@@ -40,3 +40,14 @@ Source: https://github.com/tyvdh/soroban-pioneer-quest/blob/main/.gitpod.yml#L9-
 curl --location --request GET 'https://friendbot-futurenet.stellar.org?addr=GCFJ5IGBT66OBII3WKAZAZHULKRUWRYBQNMGDXJ3LCPI7XGDXWE2HZPP'
 ```
 Special thanks to: https://pullanswer.com/questions/use-the-cli-to-deploy-contract-against-futurenet
+
+### Use the CLI to deploy contract to futurenet
+
+Keypair:
+- GD7BCUTI6YPVGYM7TKCMS4TYPGPWXLJ2QZ6AALXXJL6SPID7UQXIRKM3
+- SATSTNUESANXDTF3XGCGMCA3VTCSLTAP35S4MNFSVTID7CRFXLNTT7LK
+
+Fund
+```
+curl --location --request GET 'https://friendbot-futurenet.stellar.org?addr=GD7BCUTI6YPVGYM7TKCMS4TYPGPWXLJ2QZ6AALXXJL6SPID7UQXIRKM3'
+```
