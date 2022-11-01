@@ -1,3 +1,9 @@
 [submodule "soroban-example-dapp"]
 	path = soroban-example-dapp
 	url = git@github.com:didalik/soroban-example-dapp.git
+[submodule "soroban-cli"]
+	path = soroban-cli
+	url = ./soroban-cli/
+[submodule "soroban-examples"]
+	path = soroban-examples
+	url = ./soroban-examples/
