@@ -3,7 +3,7 @@
 	url = git@github.com:didalik/soroban-example-dapp.git
 [submodule "soroban-cli"]
 	path = soroban-cli
-	url = ./soroban-cli/
+	url = https://github.com/stellar/soroban-cli.git
 [submodule "soroban-examples"]
 	path = soroban-examples
-	url = ./soroban-examples/
+	url = https://github.com/stellar/soroban-examples.git
