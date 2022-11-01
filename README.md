@@ -70,3 +70,10 @@ alec@miasrv ~/process/stellar/hello-soroban (main) $ $(git clone https://github.
    Replacing /home/alec/.cargo/bin/soroban
     Replaced package `soroban-cli v0.1.0 (/home/alec/process/stellar/hello-soroban/soroban-cli)` with `soroban-cli v0.1.2 (/home/alec/process/stellar/hello-soroban/soroban-cli)` (executable `soroban`)
 ```
+
+Build the `hello_world` wasm contract:
+```
+alec@miasrv ~/process/stellar/hello-soroban (main) $ $(git clone https://github.com/stellar/soroban-examples.git; cd ./soroban-examples/hello_world; cargo build --target wasm32-unknown-unknown --release)
+...
+    Finished release [optimized] target(s) in 1m 50s
+```
