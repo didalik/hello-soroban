@@ -90,13 +90,26 @@ success
 6c0bfad9a0ba7ce51b9e540726bd036107ed624f06f2c9192b2613f0c4f7d7d8
 ```
 
-Invoke the wasm contract:
+Invoke the wasm contract locally:
 ```
 alec@miasrv ~/process/stellar/hello-soroban (main) $ soroban invoke \
 > --id 6c0bfad9a0ba7ce51b9e540726bd036107ed624f06f2c9192b2613f0c4f7d7d8 \
 > --fn hello --arg kids --cost --footprint \
 > --secret-key SATSTNUESANXDTF3XGCGMCA3VTCSLTAP35S4MNFSVTID7CRFXLNTT7LK \
 > --rpc-url http://localhost:8000/soroban/rpc \
+> --network-passphrase "Test SDF Future Network ; October 2022"
+Footprint: {"readOnly":[{"contractData":{"contractId":[108,11,250,217,160,186,124,229,27,158,84,7,38,189,3,97,7,237,98,79,6,242,201,25,43,38,19,240,196,247,215,216],"key":{"static":"ledgerKeyContractCode"}}}],"readWrite":[]}
+success
+["Hello","kids"]
+```
+
+Invoke the contract over LAN:
+```
+alec@MacBook-Air ~ $ soroban invoke \
+> --id 6c0bfad9a0ba7ce51b9e540726bd036107ed624f06f2c9192b2613f0c4f7d7d8 \
+> --fn hello --arg kids --cost --footprint \
+> --secret-key SATSTNUESANXDTF3XGCGMCA3VTCSLTAP35S4MNFSVTID7CRFXLNTT7LK \
+> --rpc-url http://miasrv:8000/soroban/rpc \
 > --network-passphrase "Test SDF Future Network ; October 2022"
 Footprint: {"readOnly":[{"contractData":{"contractId":[108,11,250,217,160,186,124,229,27,158,84,7,38,189,3,97,7,237,98,79,6,242,201,25,43,38,19,240,196,247,215,216],"key":{"static":"ledgerKeyContractCode"}}}],"readWrite":[]}
 success
